@@ -1,1 +1,8 @@
-<p>challenge works!</p>
+<div style="width: 100%; height:100%; position: relative;" [ngStyle]="{'backgroundColor': colorEarned}" fxLayoutAlign="center center">
+    <div class="container" fxLayout="column" fxLayoutAlign="center center">
+        <h1 class="counter">{{counter}}</h1>
+        <button class="reset-button" role="button" (click)="colorDetector(counter)">Reset Timer</button>
+    </div>
+
+<app-statistics *ngIf="statisticsOn" [colorParsed]="colorParsed"></app-statistics>
+</div>

@@ -1,0 +1,67 @@
+
+.reset-button {
+  align-items: center;
+  background-color: rgba(220, 220, 220, 0.26);
+  border: 1px solid #DFDFDF;
+  border-radius: 16px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 25px;
+  justify-content: center;
+  line-height: 28px;
+  max-width: 100%;
+  padding: 14px 22px;
+  text-decoration: none;
+  transition: all .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  height:8vh;
+  margin-top: 4vh;
+
+}
+
+.reset-button:active,
+.reset-button:hover {
+  outline: 0;
+}
+
+
+
+.reset-button:hover {
+  background-color: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.19);
+}
+
+.reset-button:active {
+    background-color: rgba(150, 150, 150, 0.26);
+}
+
+
+
+@media (min-width: 768px) {
+  .reset-button {
+    font-size: 25px;
+    min-width: 200px;
+    padding: 14px 16px;
+  }
+}
+
+
+.container {
+    width: 35vh;
+  }
+  
+
+.counter {
+    font-size: 8vh;
+    margin-bottom: 4vh;
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+
