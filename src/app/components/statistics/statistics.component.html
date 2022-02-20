@@ -12,7 +12,7 @@
           Clicks Register 
        </div>
       </div>
-      <div *ngFor="let row of colorParsed; let i = index" fxLayout="row" class="value-container" >
+      <div *ngFor="let row of colorParsedStored; let i = index" fxLayout="row" class="value-container" >
           <div class="value-stat color" [ngStyle]="{'backgroundColor': colorCodes[i]}">
              {{row.color}}
           </div>

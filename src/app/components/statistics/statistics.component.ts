@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ColorArrays, ALL_CODES } from 'src/app/types/types';
-import { MatTableDataSource } from '@angular/material/table';
 
 
 @Component({
@@ -9,22 +8,24 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./statistics.component.scss']
 })
 export class StatisticsComponent implements OnInit {
-
+  
+  //output emitted when the "restart timer" button its clicked, it does restart the challenge
   @Output() restartGame = new EventEmitter();
-  @Input() colorParsed!:ColorArrays[];
-  @Input() statisticsOn!:boolean;
-
-  public displayedColumns!:string[];
+  //it has the table's values to show
+  @Input() colorParsedStored!:ColorArrays[];
+  //it is use to paint the row with its corresponding color.
   public readonly colorCodes = ALL_CODES;
-  dataSource = this.colorParsed;
 
-
+  
   constructor() {
+    
    }
 
 
+   
   ngOnInit(): void {
-    console.log(this.colorParsed);
+  console.log(this.colorParsedStored[0].color);
+
   }
 
   
