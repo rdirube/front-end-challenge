@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ColorArrays } from 'src/app/types/types';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ColorArrays, ALL_CODES } from 'src/app/types/types';
+import { MatTableDataSource } from '@angular/material/table';
+
 
 @Component({
   selector: 'app-statistics',
@@ -8,12 +10,27 @@ import { ColorArrays } from 'src/app/types/types';
 })
 export class StatisticsComponent implements OnInit {
 
+  @Output() restartGame = new EventEmitter();
+  @Input() colorParsed!:ColorArrays[];
+  @Input() statisticsOn!:boolean;
 
-  @Input() colorParsed!:ColorArrays;
+  public displayedColumns!:string[];
+  public readonly colorCodes = ALL_CODES;
+  dataSource = this.colorParsed;
 
-  constructor() { }
+
+  constructor() {
+   }
+
 
   ngOnInit(): void {
+    console.log(this.colorParsed);
   }
+
+  
+  public restartGameButton() {
+   this.restartGame.emit();
+  }
+
 
 }

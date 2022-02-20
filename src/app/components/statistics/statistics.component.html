@@ -1,1 +1,26 @@
 
+
+    <div fxLayout="column" class="statistics-container" fxLayoutAlign="start   space-evenly"> 
+      <div class="statistics-title" fxLayoutAlign="center center">
+        STATISTICS CHART
+      </div>
+      <div fxLayout="row" class="property-container">
+       <div class="property-stat">
+         Colors
+       </div>
+       <div class="property-stat">
+          Clicks Register 
+       </div>
+      </div>
+      <div *ngFor="let row of colorParsed; let i = index" fxLayout="row" class="value-container" >
+          <div class="value-stat color" [ngStyle]="{'backgroundColor': colorCodes[i]}">
+             {{row.color}}
+          </div>
+          <div class="value-stat quantity" [ngStyle]="{'backgroundColor': colorCodes[i]}">
+             {{row.quantity}}
+          </div>
+      </div>
+      <div style="width: 100%; height: 100%;" fxLayoutAlign="center center">
+      <button class="chart-reset-button" fxLayoutAlign="center center" (click)="restartGameButton()">Reset Timer</button>
+     </div>
+    </div>

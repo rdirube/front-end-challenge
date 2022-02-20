@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ChallengeComponent } from './challenge/challenge.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { StatisticsComponent } from './statistics/statistics.component';
-
+import {MatTableModule} from '@angular/material/table'; 
 
 @NgModule({
   declarations: [
@@ -12,11 +12,13 @@ import { StatisticsComponent } from './statistics/statistics.component';
   ],
   imports: [
     CommonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatTableModule
   ],
   exports: [
     ChallengeComponent, 
-    StatisticsComponent
+    StatisticsComponent,
+    MatTableModule
   ]
 })
 export class ChallengeModule { }
