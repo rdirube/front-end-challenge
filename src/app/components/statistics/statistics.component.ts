@@ -24,7 +24,6 @@ export class StatisticsComponent implements OnInit {
 
    
   ngOnInit(): void {
-  console.log(this.colorParsedStored[0].color);
 
   }
 
